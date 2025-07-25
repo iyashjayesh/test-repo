@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - John Doe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">John Doe</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Get In Touch</h1>
+            <p class="page-subtitle">I'd love to hear from you. Let's discuss your next project or just say hello!</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's Start a Conversation</h3>
+                    <p>
+                        Whether you have a project in mind, need technical consultation, or just want to connect, 
+                        I'm always excited to hear about new opportunities and interesting challenges.
+                    </p>
+                    <p>
+                        I typically respond to messages within 24 hours. For urgent inquiries, 
+                        feel free to reach out directly via phone or LinkedIn.
+                    </p>
+                    
+                    <ul class="contact-details">
+                        <li><strong>Email:</strong> john.doe@example.com</li>
+                        <li><strong>Phone:</strong> +1 (555) 123-4567</li>
+                        <li><strong>Location:</strong> San Francisco, CA</li>
+                        <li><strong>Available:</strong> Monday - Friday, 9 AM - 6 PM PST</li>
+                    </ul>
+
+                    <div class="contact-social">
+                        <h4>Connect on Social</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link-detailed">
+                                <span class="social-icon">📧</span>
+                                <div>
+                                    <strong>Email</strong>
+                                    <p>john.doe@example.com</p>
+                                </div>
+                            </a>
+                            <a href="#" class="social-link-detailed">
+                                <span class="social-icon">💼</span>
+                                <div>
+                                    <strong>LinkedIn</strong>
+                                    <p>Connect professionally</p>
+                                </div>
+                            </a>
+                            <a href="#" class="social-link-detailed">
+                                <span class="social-icon">🐙</span>
+                                <div>
+                                    <strong>GitHub</strong>
+                                    <p>Check out my code</p>
+                                </div>
+                            </a>
+                            <a href="#" class="social-link-detailed">
+                                <span class="social-icon">🐦</span>
+                                <div>
+                                    <strong>Twitter</strong>
+                                    <p>Follow for updates</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send Me a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectType">Project Type</label>
+                            <select id="projectType" name="projectType">
+                                <option value="">Select a project type</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="mobile-app">Mobile App</option>
+                                <option value="consultation">Technical Consultation</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-5k">Under $5,000</option>
+                                <option value="5k-15k">$5,000 - $15,000</option>
+                                <option value="15k-30k">$15,000 - $30,000</option>
+                                <option value="30k-plus">$30,000+</option>
+                                <option value="discuss">Let's discuss</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">Project Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select timeline</option>
+                                <option value="asap">ASAP</option>
+                                <option value="1-month">Within 1 month</option>
+                                <option value="3-months">1-3 months</option>
+                                <option value="6-months">3-6 months</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Tell me about your project, goals, and any specific requirements..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to my newsletter for web development tips and updates
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What types of projects do you work on?</h3>
+                    <p>
+                        I specialize in web applications, e-commerce platforms, content management systems, 
+                        and mobile-responsive websites. I work with modern technologies like React, Node.js, 
+                        and cloud platforms.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What's your typical project timeline?</h3>
+                    <p>
+                        Project timelines vary based on complexity and scope. Simple websites typically take 2-4 weeks, 
+                        while complex web applications can take 2-6 months. I'll provide a detailed timeline estimate 
+                        after understanding your requirements.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you work with teams or agencies?</h3>
+                    <p>
+                        Yes! I frequently collaborate with design agencies, marketing teams, and other developers. 
+                        I'm comfortable working as part of a larger team or leading technical aspects of projects.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you provide ongoing maintenance?</h3>
+                    <p>
+                        Absolutely. I offer various maintenance packages including security updates, content updates, 
+                        performance optimization, and feature enhancements. We can discuss the best option for your needs.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What's included in your development process?</h3>
+                    <p>
+                        My process includes requirements analysis, technical planning, design review, development, 
+                        testing, deployment, and post-launch support. I maintain clear communication throughout 
+                        and provide regular progress updates.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can you help with existing projects?</h3>
+                    <p>
+                        Yes, I can help with debugging, adding features, performance optimization, or modernizing 
+                        existing applications. I'm experienced in taking over and improving existing codebases.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>John Doe</h3>
+                    <p>Full Stack Developer passionate about creating amazing web experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 John Doe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.name || !data.email || !data.subject || !data.message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Simulate form submission
+            alert('Thank you for your message! I\'ll get back to you within 24 hours.');
+            contactForm.reset();
+        });
+
+        // Form field animations
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', () => {
+                if (!input.value) {
+                    input.parentElement.classList.remove('focused');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

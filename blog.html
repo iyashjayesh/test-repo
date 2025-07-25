@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - John Doe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">John Doe</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Blog</h1>
+            <p class="page-subtitle">Thoughts, tutorials, and insights on web development and technology</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="container">
+            <!-- Featured Post -->
+            <div class="featured-post">
+                <h2 class="section-title">Featured Post</h2>
+                <article class="blog-post featured">
+                    <div class="blog-post-header">
+                        <div class="blog-post-meta">
+                            <span>December 15, 2024</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                            <span>•</span>
+                            <span>React</span>
+                        </div>
+                        <h2 class="blog-post-title">Getting Started with React Hooks: A Complete Guide</h2>
+                        <p class="blog-post-excerpt">
+                            React Hooks have revolutionized the way we write React components. In this comprehensive guide, 
+                            we'll explore the most commonly used hooks and learn how to build powerful, reusable components 
+                            with functional programming patterns.
+                        </p>
+                    </div>
+                    <div class="blog-post-content">
+                        <p>
+                            React Hooks were introduced in React 16.8 as a way to use state and other React features 
+                            in functional components. Before hooks, you had to use class components to manage state, 
+                            which often led to complex and hard-to-understand code.
+                        </p>
+                        
+                        <h3>What are React Hooks?</h3>
+                        <p>
+                            Hooks are functions that let you "hook into" React state and lifecycle features from 
+                            function components. They don't work inside classes — they let you use React without classes.
+                        </p>
+                        
+                        <h3>The useState Hook</h3>
+                        <p>
+                            The useState hook is the most basic hook that allows you to add state to functional components. 
+                            Here's a simple example:
+                        </p>
+                        
+                        <div class="code-block">
+                            <pre><code>import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={() => setCount(count + 1)}&gt;
+        Click me
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+                        </div>
+                        
+                        <h3>The useEffect Hook</h3>
+                        <p>
+                            The useEffect hook lets you perform side effects in function components. It serves the same 
+                            purpose as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
+                        </p>
+                        
+                        <div class="code-block">
+                            <pre><code>import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  });
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={() => setCount(count + 1)}&gt;
+        Click me
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+                        </div>
+                        
+                        <h3>Custom Hooks</h3>
+                        <p>
+                            One of the most powerful features of hooks is the ability to create custom hooks. 
+                            Custom hooks allow you to extract component logic into reusable functions.
+                        </p>
+                        
+                        <p>
+                            React Hooks provide a more direct API to the React concepts you already know. 
+                            They make your code more readable and easier to test, while also providing better 
+                            performance optimizations.
+                        </p>
+                        
+                        <div class="blog-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Hooks</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Recent Posts -->
+            <div class="recent-posts">
+                <h2 class="section-title">Recent Posts</h2>
+                <div class="blog-posts">
+                    <article class="blog-post">
+                        <div class="blog-post-header">
+                            <div class="blog-post-meta">
+                                <span>December 10, 2024</span>
+                                <span>•</span>
+                                <span>6 min read</span>
+                                <span>•</span>
+                                <span>CSS</span>
+                            </div>
+                            <h2 class="blog-post-title">CSS Grid vs Flexbox: When to Use Which</h2>
+                            <p class="blog-post-excerpt">
+                                Understanding the differences between CSS Grid and Flexbox is crucial for modern web development. 
+                                Both are powerful layout systems, but they excel in different scenarios. Let's explore when to use each one.
+                            </p>
+                        </div>
+                        <div class="blog-post-content">
+                            <p>
+                                CSS Grid and Flexbox are both layout methods in CSS, but they serve different purposes 
+                                and are designed to solve different problems. While they can sometimes be used 
+                                interchangeably, understanding their strengths will help you choose the right tool for the job.
+                            </p>
+                            
+                            <h3>CSS Grid: Two-Dimensional Layout</h3>
+                            <p>
+                                CSS Grid is designed for two-dimensional layout - it can handle both rows and columns 
+                                simultaneously. It's perfect for creating complex layouts where you need precise control 
+                                over both horizontal and vertical alignment.
+                            </p>
+                            
+                            <h3>Flexbox: One-Dimensional Layout</h3>
+                            <p>
+                                Flexbox is designed for one-dimensional layout - either a row or a column. It's excellent 
+                                for distributing space between items in a single direction and for simple component layouts.
+                            </p>
+                            
+                            <p>
+                                The key is to understand that Grid and Flexbox work great together. You might use Grid 
+                                for your overall page layout and Flexbox for individual components within that layout.
+                            </p>
+                            
+                            <div class="blog-tags">
+                                <span class="tag">CSS</span>
+                                <span class="tag">Grid</span>
+                                <span class="tag">Flexbox</span>
+                                <span class="tag">Layout</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="blog-post-header">
+                            <div class="blog-post-meta">
+                                <span>December 5, 2024</span>
+                                <span>•</span>
+                                <span>10 min read</span>
+                                <span>•</span>
+                                <span>Web Development</span>
+                            </div>
+                            <h2 class="blog-post-title">Building Responsive Web Applications</h2>
+                            <p class="blog-post-excerpt">
+                                In today's multi-device world, creating responsive web applications is not optional—it's essential. 
+                                Learn the best practices and techniques for building websites that work seamlessly across all devices.
+                            </p>
+                        </div>
+                        <div class="blog-post-content">
+                            <p>
+                                Responsive web design is an approach to web design that makes web pages render well on 
+                                a variety of devices and window or screen sizes. With the increasing diversity of devices 
+                                accessing the web, responsive design has become a standard practice.
+                            </p>
+                            
+                            <h3>Mobile-First Approach</h3>
+                            <p>
+                                The mobile-first approach means designing for mobile devices first, then progressively 
+                                enhancing the experience for larger screens. This approach ensures that your site works 
+                                well on the smallest screens and loads quickly on slower connections.
+                            </p>
+                            
+                            <h3>Flexible Grid Systems</h3>
+                            <p>
+                                Using flexible grid systems allows your layout to adapt to different screen sizes. 
+                                CSS Grid and Flexbox provide powerful tools for creating flexible, responsive layouts 
+                                without relying on fixed pixel values.
+                            </p>
+                            
+                            <h3>Responsive Images</h3>
+                            <p>
+                                Images should scale appropriately for different devices. Use the srcset attribute and 
+                                picture element to serve different image sizes based on the device's capabilities.
+                            </p>
+                            
+                            <div class="blog-tags">
+                                <span class="tag">Responsive Design</span>
+                                <span class="tag">Mobile First</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">UX</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-post">
+                        <div class="blog-post-header">
+                            <div class="blog-post-meta">
+                                <span>November 28, 2024</span>
+                                <span>•</span>
+                                <span>7 min read</span>
+                                <span>•</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <h2 class="blog-post-title">Modern JavaScript: ES2024 Features You Should Know</h2>
+                            <p class="blog-post-excerpt">
+                                JavaScript continues to evolve with new features that make development more efficient and enjoyable. 
+                                Let's explore the latest ES2024 features and how they can improve your code.
+                            </p>
+                        </div>
+                        <div class="blog-post-content">
+                            <p>
+                                ECMAScript 2024 (ES2024) brings several new features to JavaScript that enhance developer 
+                                productivity and code readability. Let's dive into the most important additions.
+                            </p>
+                            
+                            <h3>Array Grouping</h3>
+                            <p>
+                                The new Object.groupBy() method allows you to group array elements based on a callback function, 
+                                making data manipulation more intuitive and functional.
+                            </p>
+                            
+                            <h3>Temporal API</h3>
+                            <p>
+                                The Temporal API is a modern replacement for the Date object, providing better support for 
+                                time zones, calendars, and date arithmetic. It addresses many of the issues developers 
+                                face with the current Date API.
+                            </p>
+                            
+                            <h3>Top-level await</h3>
+                            <p>
+                                You can now use await at the top level of modules, making it easier to work with 
+                                asynchronous initialization code without wrapping it in an async function.
+                            </p>
+                            
+                            <div class="blog-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">ES2024</span>
+                                <span class="tag">Async/Await</span>
+                                <span class="tag">Programming</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="newsletter-signup">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to my newsletter to get the latest posts delivered directly to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>John Doe</h3>
+                    <p>Full Stack Developer passionate about creating amazing web experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 John Doe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Newsletter form submission
+        const newsletterForm = document.querySelector('.newsletter-form');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            alert(`Thank you for subscribing with email: ${email}`);
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
